@@ -1,0 +1,28 @@
+# Generated Documentation Config
+springdoc:
+  swagger-ui:
+    path: /docs
+
+
+# Spring Config
+spring:
+  data:
+    mongodb:
+      uri: ${aaj.mongodb.server.uri}
+      database: ${aaj.mongodb.server.database}
+  application:
+    name: REQUEST-TESTER
+
+# Server Config
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /request-tester/api
+
+# Keycloak config
+keycloak:
+  realm: ${aaj.keycloak.realm}
+  resource: ${aaj.keycloak.resource}
+  auth-server-url: ${aaj.keycloak.auth-server-url}
+  ssl-required: none
+  public-client: true
